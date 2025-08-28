@@ -24,11 +24,17 @@ Nutritional information for Indian foods, used to calculate energy, macros, and 
 **Columns:** Dish Name, Calories, Carbohydrates, Protein, Fats, Free Sugar, Fibre, Sodium, Calcium, Iron, Vitamin C, Folate, Detailed_Category, Broad_Category.  
 
 ## 🖥 Code
-**main.py**  
+**Team_SJRK_MLCODE.py**  
 - Implements Random Forest Regressor for predicting personalized wellness and nutrition outcomes.  
 - Integrates both datasets to calculate step goals, calorie needs, and survival scores.  
 - Maps real-world data to gamified in-game resources.  
 - Generates dashboards for individual and team performance.  
+
+## 🎨 Front_End
+The **Front_End** folder contains all the JavaScript code for our prototype’s user interface.  
+- Implements interactive dashboards, leaderboards, and survival game visuals.  
+- Provides seamless navigation between wellness tracking, food logging, and gamified missions.  
+- Built with a focus on usability and engagement to make the survival adventure immersive.  
 
 ## 📊 Presentation
 **SJRK-DATASPRINT.pptx**  
@@ -40,3 +46,4 @@ Nutritional information for Indian foods, used to calculate energy, macros, and 
 2. AI calculates personalized wellness and nutrition goals.  
 3. Gamified system translates goals into survival resources.  
 4. Teams collaborate to stay alive, win rewards, and boost real-world wellness.  
+
