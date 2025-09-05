@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wellness Stock Market Design System - Premium Financial Dashboard Meets Modern Wellness
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary: Deep Corporate Blue */
+    --primary: 227 60% 22%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 227 60% 35%;
+    
+    /* Success: Vibrant Green for gains */
+    --success: 154 64% 52%;
+    --success-foreground: 0 0% 100%;
+    --success-glow: 154 64% 65%;
+    
+    /* Warning: Premium Gold for highlights */
+    --warning: 44 92% 63%;
+    --warning-foreground: 215 25% 15%;
+    --warning-glow: 44 92% 75%;
+    
+    /* Danger: Financial Red for losses */
+    --danger: 0 70% 60%;
+    --danger-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 215 25% 15%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 215 20% 50%;
+
+    --accent: 154 30% 95%;
+    --accent-foreground: 154 64% 25%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 94%;
+    --ring: 227 60% 22%;
+
+    /* Gradients for premium financial feel */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-glow)));
+    --gradient-warning: linear-gradient(135deg, hsl(var(--warning)), hsl(var(--warning-glow)));
+    --gradient-market: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+    
+    /* Shadows with theme colors */
+    --shadow-financial: 0 8px 32px -4px hsl(var(--primary) / 0.15);
+    --shadow-success: 0 4px 24px -4px hsl(var(--success) / 0.25);
+    --shadow-warning: 0 4px 24px -4px hsl(var(--warning) / 0.25);
+    --shadow-subtle: 0 2px 16px -2px hsl(var(--foreground) / 0.08);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    /* Primary: Brighter blue for dark mode */
+    --primary: 227 70% 65%;
+    --primary-foreground: 215 30% 8%;
+    --primary-glow: 227 70% 75%;
+
+    /* Success: Slightly brighter for visibility */
+    --success: 154 60% 55%;
+    --success-foreground: 215 30% 8%;
+    --success-glow: 154 60% 70%;
+
+    /* Warning: Toned down gold */
+    --warning: 44 85% 70%;
+    --warning-foreground: 215 30% 8%;
+    --warning-glow: 44 85% 80%;
+
+    /* Danger: Bright red for dark mode */
+    --danger: 0 75% 65%;
+    --danger-foreground: 215 30% 8%;
+
+    --secondary: 215 20% 18%;
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 154 20% 20%;
+    --accent-foreground: 154 60% 70%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 215 30% 8%;
+
+    --border: 215 20% 20%;
+    --input: 215 20% 18%;
+    --ring: 227 70% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Financial Dashboard Utilities */
+  .financial-card {
+    @apply bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-300;
+  }
+  
+  .market-ticker {
+    @apply bg-gradient-to-r from-primary/5 to-primary/10 border-t border-b border-primary/20;
+  }
+  
+  .price-up {
+    @apply text-success;
+  }
+  
+  .price-down {
+    @apply text-danger;
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-warning {
+    background: var(--gradient-warning);
+  }
+  
+  .shadow-financial {
+    box-shadow: var(--shadow-financial);
+  }
+  
+  .shadow-success {
+    box-shadow: var(--shadow-success);
+  }
+  
+  .shadow-warning {
+    box-shadow: var(--shadow-warning);
+  }
+  
+  .pulse-success {
+    @apply animate-pulse text-success;
+  }
+  
+  .pulse-danger {
+    @apply animate-pulse text-danger;
+  }
+}
